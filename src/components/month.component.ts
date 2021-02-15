@@ -220,15 +220,7 @@ export class MonthComponent implements ControlValueAccessor, AfterViewInit {
           this._date[0] = item;
           this.selectStart.emit(item);
         }
-      } 
-      else {
-        this._date[0] = item;
-        this.selectStart.emit(item);
-        this._date[1] = null;
-      }
-      /* Modify rosses: reset if range is defined */
-      /*
-      else if (this._date[0].time > item.time) {
+      } else if (this._date[0].time > item.time) {
         this._date[0] = item;
         this.selectStart.emit(item);
       } else if (this._date[1].time < item.time) {
@@ -239,7 +231,6 @@ export class MonthComponent implements ControlValueAccessor, AfterViewInit {
         this.selectStart.emit(item);
         this._date[1] = null;
       }
-      */
 
       this.change.emit(this._date);
       return;
