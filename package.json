@@ -6,7 +6,7 @@
   "typings": "./dist/index.d.ts",
   "scripts": {
     "start": "cd ./dev && npm start",
-    "clean:dist": "rm -rf dist",
+    "clean:dist": "dir",
     "demo:link": "npm link && cd ./demo && npm link ion2-calendar",
     "demo:serve": "cd ./demo && ionic serve",
     "build": "run-s clean:dist build:copy-sources build:compile-scss build:ts",
